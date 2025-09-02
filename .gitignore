@@ -2,8 +2,14 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,macos,windows,linux
 
 # data directory
-/data/*
-!/data/sample_submission.csv
+!data/
+
+# data.tar.gz 압축해제 시 생성되는 파일
+data/train/*
+data/test/*
+data/meta.csv
+data/train.csv
+data/sample_submission.csv
 
 
 ### Linux ###
