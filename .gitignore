@@ -4,6 +4,8 @@
 # data directory
 /data/*
 !/data/sample_submission.csv
+
+
 ### Linux ###
 *~
 
