@@ -1,0 +1,14 @@
+defaults:
+  # - data: 
+  - model: resnet50
+  - train: trainer
+  - optimizer: adam
+
+  - callback:
+    - early_stopping
+    - lr_monitor
+  - logger: wandb
+  - infer: infer
+
+fold: null
+fold_suffix: "" 

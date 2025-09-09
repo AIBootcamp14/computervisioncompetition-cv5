@@ -1,0 +1,12 @@
+project: "cv_competition"
+
+group: "${model.backbone.model_name}"
+tags:
+  - "${optimizer.name}"
+  - "epochs=${train.trainer.max_epochs}"
+  - "imgsz=${oc.select:data.img_size,unknown}"
+  - "${oc.select:exp_tag, }"     # 있으면 붙고 없으면 빈값
+notes: "${oc.select:desc, ''}"
+mode: "online"                   # 'disabled'면 로컬만
+# save_dir: "."                    # 선택
+log_model: true                  # 체크포인트 업로드 원하면

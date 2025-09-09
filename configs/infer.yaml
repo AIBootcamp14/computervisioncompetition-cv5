@@ -1,0 +1,7 @@
+infer:
+  enabled: true
+  use_best_ckpt: true
+  ckpt_path: null
+  submission_dir: "submissions"
+  filename_predix: "sub"
+  log_to_wandb: true
