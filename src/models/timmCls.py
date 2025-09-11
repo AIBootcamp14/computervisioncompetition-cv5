@@ -8,17 +8,18 @@ from hydra.utils import instantiate
 from omegaconf import DictConfig, OmegaConf
 
 class TimmClassifier(LightningModule):
-    def __init__(self, num_classes, backbone, optimizer, scheduler):
+    def __init__(self, num_classes, backbone, optimizer_cfg = None, scheduler_cfg = None):
         super().__init__()
-        
+        self.save_hyperparameters()
+
         self.accuracy = torchmetrics.Accuracy(task = 'multiclass', num_classes=num_classes)
         self.f1_macro = torchmetrics.F1Score(task = 'multiclass', num_classes=num_classes, average='macro')
         
         self.criterion = nn.CrossEntropyLoss()
-        self.optimizer = optimizer
-        self.scheduler = scheduler
+        self.optimizer_cfg = optimizer_cfg
+        self.scheduler_cfg = scheduler_cfg
 
-        self.model = instantiate(backbone)
+        self.model = timm.create_model(backbone, pretrained= True, num_classes = num_classes)
         self.softmax = nn.Softmax(dim = 1)
 
     def forward(self, x):
@@ -53,12 +54,11 @@ class TimmClassifier(LightningModule):
         self.log("valid_f1", f1, on_step= False, on_epoch = True, logger = True, prog_bar=True)
 
     def configure_optimizers(self):
-        optimizer = instantiate(self.optimizer, self.parameters())
-
-        if self.scheduler is None or (isinstance(self.scheduler, DictConfig) and self.share_memory._is_none()):
+        optimizer = instantiate(self.optimizer_cfg, params=self.parameters())
+        if self.scheduler_cfg is None:
             return optimizer
         
-        scheduler = instantiate(self.scheduler, optimizer)
+        scheduler = instantiate(self.scheduler_cfg, optimizer)
         
         return [optimizer], [scheduler]
     

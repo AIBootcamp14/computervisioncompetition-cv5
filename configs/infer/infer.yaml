@@ -3,5 +3,5 @@ infer:
   use_best_ckpt: true
   ckpt_path: null
   submission_dir: "submissions"
-  filename_predix: "sub"
+  filename_prefix: "sub"
   log_to_wandb: true

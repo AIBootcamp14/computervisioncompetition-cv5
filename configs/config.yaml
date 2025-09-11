@@ -1,9 +1,9 @@
 defaults:
-  # - data: 
+  - data: data
   - model: resnet50
   - train: trainer
   - optimizer: adam
-
+  - scheduler: cos_lr
   - callback:
     - early_stopping
     - lr_monitor
@@ -12,3 +12,6 @@ defaults:
 
 fold: null
 fold_suffix: "" 
+
+cv_ensure: false
+ensemble_ensure: false

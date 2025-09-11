@@ -3,8 +3,26 @@
 
 .python-version
 
+#temp
+temp.ipynb
+
+# src/outputs/
+src/outputs/*
+
+# src/multirun
+src/multirun/*
+
+# cache
+/cache/
+/cache/*
+
+#submission
+!submission/
+submission/*
+
 # data directory
 !data/
+
 
 # data.tar.gz 압축해제 시 생성되는 파일
 data/train/*

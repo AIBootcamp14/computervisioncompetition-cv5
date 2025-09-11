@@ -1,11 +1,3 @@
 model:
-  _target_: src.models.timmCls.TimmClassifier
+  backbone: resnet50
   num_classes: 17
-  optimizer: ${optimizer}
-  scheduler: ${oc.select:scheduler, null}
-
-  backbone:
-    _target_: timm.create_model
-    model_name: resnet50
-    num_classes: ${..num_classes}
-    pretrained: true
