@@ -17,19 +17,21 @@ src/multirun/*
 /cache/*
 
 #submission
-!submission/
-submission/*
+!submissions/
+!submissions/.gitkeep
+submissions/*
 
 # data directory
-!data/
-
-
 # data.tar.gz 압축해제 시 생성되는 파일
+!data/
+!data/.gitkeep
 data/train/*
 data/test/*
 data/meta.csv
 data/train.csv
 data/sample_submission.csv
+
+
 
 
 ### Linux ###
