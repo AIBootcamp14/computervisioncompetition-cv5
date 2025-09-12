@@ -40,7 +40,8 @@ wandb==0.21.3
 
 ### Timeline
 
-- September 1, 2025 ~ September 9, 2025
+- **프로젝트 기간**: 2025-09-01 - 2025-09-11
+- **최종 제출**: 2025-09-11 (19시)
 
 ## 2. Components
 
@@ -136,8 +137,17 @@ wandb==0.21.3
 ## etc
 
 ### Meeting Log
+1~2일 간격으로 주기적인 미팅으로 진행상황 및 이슈사항 공유
 
-- 1~2일 간격으로 주기적인 미팅으로 진행상황 및 이슈사항 공유
+|날짜|회의 내용|
+|-----|-----|
+|2025-08-27|• Team Building|
+|2025-09-01|• 대회 개요 및 데이터 구조 파악, 평가 지표 이해를 위한 계산식 확인<br>• 서버 생성 및 환경 구축, Baseline실행 및 submission 파일 제출<br>• train, test set에 대한 EDA 진행|
+|2025-09-03|• EDA 진행 내용 공유<br>• Hydra, wandb 등 실험 환경 구축에 대한 내용 논의|
+|2025-09-05|• 각자 실험을 위한 코드 개발 및 실험 진행 내용 공유<br>• 증강 방법에 대한 내용 논의|
+|2025-09-09|• 각자 진행한 실험 내용 공유<br>• validation set 증강 재현에 대한 내용 논의<br>• Hydra, wandb 사용하여 실험 환경 작업 내용 공유|
+|2025-09-10|• 각자 진행한 실험 내용 공유|
+|2025-09-11|• 각자 진행한 실험 내용 공유|
 
 ### Reference
 - [\[2301.00808\] ConvNeXt V2: Co-designing and Scaling ConvNets with Masked Autoencoders](https://arxiv.org/abs/2301.00808)
