@@ -131,7 +131,7 @@ wandb==0.21.3
 
 ### Presentation
 
-- [AI-부트캠프-14기_CV-경진대회-발표(5조).pptx](https://docs.google.com/presentation/d/1lxRDSG-r6BOnA57wjGmnYVT071pgzeYd/edit?usp=sharing&ouid=101398214368344224612&rtpof=true&sd=true)
+- [AI-부트캠프-14기_CV-경진대회-발표(5조).pptx](https://github.com/AIBootcamp14/computervisioncompetition-cv5/blob/666280248cc25273f07c277fee4373f0cea4b6ec/docs/%5B%E1%84%8F%E1%85%A5%E1%84%82%E1%85%A5%E1%86%AF%E1%84%8B%E1%85%A1%E1%84%8F%E1%85%A1%E1%84%83%E1%85%A6%E1%84%86%E1%85%B5%5D-AI-%E1%84%87%E1%85%AE%E1%84%90%E1%85%B3%E1%84%8F%E1%85%A2%E1%86%B7%E1%84%91%E1%85%B3-14%E1%84%80%E1%85%B5_CV-%E1%84%80%E1%85%A7%E1%86%BC%E1%84%8C%E1%85%B5%E1%86%AB%E1%84%83%E1%85%A2%E1%84%92%E1%85%AC-%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD(5%E1%84%8C%E1%85%A9).pdf)
 
 ## etc
 
@@ -140,5 +140,13 @@ wandb==0.21.3
 - 1~2일 간격으로 주기적인 미팅으로 진행상황 및 이슈사항 공유
 
 ### Reference
-
-- _Insert related reference_
+- [\[2301.00808\] ConvNeXt V2: Co-designing and Scaling ConvNets with Masked Autoencoders](https://arxiv.org/abs/2301.00808)
+- [\[2104.00298\] EfficientNetV2: Smaller Models and Faster Training](https://arxiv.org/abs/2104.00298)
+- [\[2204.07118\] DeiT III: Revenge of the ViT](https://arxiv.org/abs/2204.07118)
+- [\[2101.00590\] RegNet: Self-Regulated Network for Image Classification](https://arxiv.org/abs/2101.00590)
+- [\[2111.09883\] Swin Transformer V2: Scaling Up Capacity and Resolution](https://arxiv.org/abs/2111.09883)
+#### Libraries
+- [timm](https://github.com/huggingface/pytorch-image-models)
+- [Albumentations](https://albumentations.ai/docs/)
+- [Augraphy](https://augraphy.readthedocs.io/en/latest/)
+- [Hydra](https://hydra.cc/docs/intro/)
