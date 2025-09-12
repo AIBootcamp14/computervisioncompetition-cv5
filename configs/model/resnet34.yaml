@@ -1,0 +1,3 @@
+model:
+  backbone: resnet34
+  num_classes: 17

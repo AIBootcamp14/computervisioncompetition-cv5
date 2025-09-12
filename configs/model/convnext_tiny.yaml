@@ -1,0 +1,3 @@
+model:
+  backbone: convnext_tiny
+  num_classes: 17

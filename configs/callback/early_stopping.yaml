@@ -1,0 +1,3 @@
+monitor: "valid_f1"
+mode: "max"
+patience: 3

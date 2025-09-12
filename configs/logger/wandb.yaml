@@ -1,0 +1,10 @@
+project: "cv_competition"
+
+group: "${model.model.backbone}"
+tags:
+  - "${optimizer._target_}"
+  - "img_sz=${oc.select:data.image_size,unknown}"
+notes: "${oc.select:desc, ''}"
+mode: "online"                   # 'disabled'면 로컬만
+# save_dir: "."                    # 선택
+log_model: false                  # 체크포인트 업로드 원하면

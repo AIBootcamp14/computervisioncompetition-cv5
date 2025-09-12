@@ -1,0 +1,4 @@
+batch_size: 16
+seed: 42
+image_size: 384
+replay: false

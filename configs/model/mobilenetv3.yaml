@@ -1,0 +1,3 @@
+model:
+  backbone: mobilenetv3_large_100
+  num_classes: 17

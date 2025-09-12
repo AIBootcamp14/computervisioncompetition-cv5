@@ -1,0 +1,3 @@
+model:
+  backbone: convnext_large.fb_in22k_ft_in1k
+  num_classes: 17

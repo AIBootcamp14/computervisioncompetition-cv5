@@ -3,15 +3,35 @@
 
 .python-version
 
-# data directory
-!data/
+#temp
+temp.ipynb
 
+# src/outputs/
+src/outputs/*
+
+# src/multirun
+src/multirun/*
+
+# cache
+/cache/
+/cache/*
+
+#submission
+!submissions/
+!submissions/.gitkeep
+submissions/*
+
+# data directory
 # data.tar.gz 압축해제 시 생성되는 파일
+!data/
+!data/.gitkeep
 data/train/*
 data/test/*
 data/meta.csv
 data/train.csv
 data/sample_submission.csv
+
+
 
 
 ### Linux ###
