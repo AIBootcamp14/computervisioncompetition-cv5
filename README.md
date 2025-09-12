@@ -12,23 +12,31 @@
 
 ### Requirements
 ```
-albumentations==2.0.0 #1.3.1
 ipykernel==6.27.1
 ipython==8.15.0
 ipywidgets==8.1.1
 jupyter==1.0.0
+matplotlib==3.10.6
 matplotlib-inline==0.1.6
 numpy==1.26.0
 pandas==2.1.4
 Pillow==9.4.0
 timm==0.9.12
+torch==2.8.0
+pytorch-lightning==2.5.5
+scikit-learn==1.7.1
+albumentations==1.3.1
+augraphy==8.2.6
+tqdm==4.67.1
+hydra-core==1.3.2
+wandb==0.21.3
 ```
 
 ## 1. Competiton Info
 
 ### Overview
 
-- 문서는 금융, 보험, 물류, 의료 등 도메인을 가리지 않고 많이 취급됩니다. 이 대회는 다양한 종류의 문서 이미지의 클래스를 예측합니다.
+- 문서는 금융, 보험, 물류, 의료 등 도메인을 가리지 않고 많이 취급됩니다. <br>이 대회는 다양한 종류의 문서 이미지의 클래스를 예측합니다.
 
 ### Timeline
 
@@ -66,7 +74,7 @@ timm==0.9.12
 ### Dataset overview
 
 - data/train, data/train.csv
-    - 1570장의 이미지, train/ 폴더에 존재하는 1570장의 이미지에 대한 정답 클래스
+    - 1570장의 이미지, train/ 폴더에 존재하는 1570장의 이미지에 대한 정답 클래스 csv
 - data/test, data/sample_submission.csv
     - 3140장의 이미지, test/ 폴더에 존재하는 3140장의 이미지에 대한 target 예측 결과가 0으로 저장된 샘플 제출용 csv
 - data/meta.csv
@@ -108,7 +116,7 @@ timm==0.9.12
 
 ### Meeting Log
 
-- _Insert your meeting log link like Notion or Google Docs_
+- 1~2일 간격으로 주기적인 미팅으로 진행상황 및 이슈사항 공유
 
 ### Reference
 
