@@ -1,56 +1,77 @@
-# Title (Please modify the title)
+# 📑 Document Type Classification | 문서 타입 분류
 ## Team
 
-| ![박패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![이패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![최패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![김패캠](https://avatars.githubusercontent.com/u/156163982?v=4) | ![오패캠](https://avatars.githubusercontent.com/u/156163982?v=4) |
+| ![김수환](https://github.com/user-attachments/assets/bfe05d23-81d0-4409-aca9-b1bb1fb5107f) | ![김명철](https://github.com/user-attachments/assets/0c545d12-539f-419d-816a-a0e4263cc0b2) | ![김상윤](https://github.com/user-attachments/assets/5bd23640-3d34-4292-bc81-e202136a1b6f) | ![김광묵](https://github.com/user-attachments/assets/5aee2fa3-df3c-4183-a780-f2028ad613ca) | ![장윤정](https://github.com/user-attachments/assets/bee0c0c4-ae06-4477-8ea6-a3cdaf2b00f8) |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
-|            [박패캠](https://github.com/UpstageAILab)             |            [이패캠](https://github.com/UpstageAILab)             |            [최패캠](https://github.com/UpstageAILab)             |            [김패캠](https://github.com/UpstageAILab)             |            [오패캠](https://github.com/UpstageAILab)             |
-|                            팀장, 담당 역할                             |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |                            담당 역할                             |
+|            [김수환](https://github.com/suhwankimkim)             |            [김명철](https://github.com/qpwpep)             |            [김상윤](https://github.com/94KSY)             |            [김광묵](https://github.com/JackFink)             |            [장윤정](https://github.com/yjjang06)             |
+|                            팀장, <br>실험환경 구성 및 모델 개발                             |                            모델 개발                             |                            모델 개발                             |                            모델 개발                             |                            모델 개발                             |
 
 ## 0. Overview
 ### Environment
-- _Write Development environment_
+- Python 3.12
 
 ### Requirements
-- _Write Requirements_
+```
+albumentations==2.0.0 #1.3.1
+ipykernel==6.27.1
+ipython==8.15.0
+ipywidgets==8.1.1
+jupyter==1.0.0
+matplotlib-inline==0.1.6
+numpy==1.26.0
+pandas==2.1.4
+Pillow==9.4.0
+timm==0.9.12
+```
 
 ## 1. Competiton Info
 
 ### Overview
 
-- _Write competition information_
+- 문서는 금융, 보험, 물류, 의료 등 도메인을 가리지 않고 많이 취급됩니다. 이 대회는 다양한 종류의 문서 이미지의 클래스를 예측합니다.
 
 ### Timeline
 
-- ex) January 10, 2024 - Start Date
-- ex) February 10, 2024 - Final submission deadline
+- September 1, 2025 ~ September 9, 2025
 
 ## 2. Components
 
 ### Directory
-
-- _Insert your directory structure_
-
-e.g.
 ```
 ├── code
-│   ├── jupyter_notebooks
-│   │   └── model_train.ipynb
+│   ├── notebooks
+│   │   ├── baseline.ipynb
+│   │   └── requirements.txt
 │   └── train.py
-├── docs
-│   ├── pdf
-│   │   └── (Template) [패스트캠퍼스] Upstage AI Lab 1기_그룹 스터디 .pptx
-│   └── paper
-└── input
-    └── data
-        ├── eval
-        └── train
+├── src
+│   ├── dataset
+│   │   └── docs_image.py
+│   ├── model
+│   │   └── timmCls.py
+│   ├── util
+│   │   ├── transform.py
+│   │   └── utils.py
+│   ├── train.py
+│   └── requirements.txt
+├── data
+│   ├── train
+│   ├── test
+│   ├── train.csv
+│   ├── meta.csv
+│   └── submission.csv
 ```
 
 ## 3. Data descrption
 
 ### Dataset overview
 
-- _Explain using data_
+- data/train, data/train.csv
+    - 1570장의 이미지, train/ 폴더에 존재하는 1570장의 이미지에 대한 정답 클래스
+- data/test, data/sample_submission.csv
+    - 3140장의 이미지, test/ 폴더에 존재하는 3140장의 이미지에 대한 target 예측 결과가 0으로 저장된 샘플 제출용 csv
+- data/meta.csv
+    - target별 class_name
+
 
 ### EDA
 
@@ -74,12 +95,14 @@ e.g.
 
 ### Leader Board
 
-- _Insert Leader Board Capture_
-- _Write rank and score_
+<img src="https://github.com/user-attachments/assets/19ffe206-cd53-499e-a7a6-18c714cbe809" />
+
+- **Evaluation Metric**: Macro F1 Score
+- **Leader Board Score**: 0.9517 (4위)
 
 ### Presentation
 
-- _Insert your presentaion file(pdf) link_
+- [AI-부트캠프-14기_CV-경진대회-발표(5조).pptx](https://docs.google.com/presentation/d/1lxRDSG-r6BOnA57wjGmnYVT071pgzeYd/edit?usp=sharing&ouid=101398214368344224612&rtpof=true&sd=true)
 
 ## etc
 
