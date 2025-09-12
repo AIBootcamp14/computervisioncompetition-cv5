@@ -102,11 +102,23 @@ wandb==0.21.3
 
 ### Model descrition
 
-- _Write model information and why your select this model_
+- 'convnextv2_large.fcmae_ft_in22k_in1k_384'
+- 'efficientnetv2_rw_m.agc_in1k'
+- 'regnety_320.swag_ft_in1k'
+- 'deit3_large_patch16_384.fb_in22k_ft_in1k'
+- 'swinv2_base_window12to24_192to384.ms_in22k_ft_in1k'
+
+적은 데이터 수로 인해 CNN 기반의 모델(convnextv2, efficientnetv2, regnet)을 주로 사용.
+다만 적은 데이터 셋이라도 트랜스포머 기반의 모델(deit3, swinv2) 역시 좋은 성능을 보여줬기 때문에 VIT/SWIN 계열의 모델 2종을 추가하여 앙상블을 진행.  
 
 ### Modeling Process
 
-- _Write model train and test process with capture_
+1. 5개의 모델을 StratifiedKFold를 이용해 학습.
+
+2. Fold마다 softmax로 로짓 값을 변환후,각 Fold의 확률을 평균하여 모델의 평균을 계산.
+
+3. 각 모델의 평균을 모델별 가중치와 곱해 가중 평균을 구하고, argmax를 취해 최종 평균을 산출.
+
 
 ## 5. Result
 
