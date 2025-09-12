@@ -83,11 +83,20 @@ wandb==0.21.3
 
 ### EDA
 
-- _Describe your EDA process and step-by-step conclusion_
+- **이미지 데이터에 대한 분포 확인**
+    - 이미지 크기, 비율, 색상 분포 확인
+    
+- **test set 이미지에 적용된 증강 확인**
+    - 회전, 플립, 크롭, 색상 변환 등 다양한 증강이 적용되어 있음을 확인
+
 
 ### Data Processing
 
-- _Describe data processing process (e.g. Data Labeling, Data Cleaning..)_
+- **Augmentations**
+    - test set 이미지와 비슷하게 train set 이미지에도 **강한 증강**을 적용
+    - 온라인 증강과 오프라인 증강의 장단점을 팀원들과 논의하여 **온라인 증강**을 적용하기로 함
+    - **ReplayCompose**를 적용하여 동일한 증강이 적용될 수 있도록 함
+    - 크롭, 리사이즈, 패딩 등을 적용 시, 여백 배경색에 대한 고민, 흰색, 검정색, 이미지 색상값의 중간값 등 여러 방법으로 적용하여 실험
 
 ## 4. Modeling
 
